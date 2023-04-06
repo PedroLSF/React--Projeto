@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+@layer components {
+    .menu-tab{
+        @apply text-amber-100 cursor-pointer border border-[#fef3c7] p-1 select-none;
+    }
+    .active-menu-tab{
+        @apply cursor-pointer border border-[#fef3c7] bg-amber-100 text-black;
+    }
+}
+
+.title{
+    font-family: 'Montserrat';
+    font-size: 5ch;
+}
+
+.subtitle{
+    font-family: 'Caveat';
+    font-size: 5ch;
+}
+
+body{
+    background-image: url('../src/assets/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    min-height: 715px;
+}
