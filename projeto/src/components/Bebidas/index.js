@@ -1,6 +1,7 @@
 import React from 'react'
 import coca from '../../assets/coke.png'
 import sprite from '../../assets/sprite.png'
+import { Link } from 'react-router-dom'
 
 const Bebidas = (props) => {
   return (
@@ -12,7 +13,7 @@ const Bebidas = (props) => {
                             <h1 className='text-white text-lg'>Coke</h1>
                             <p className='text-white text-sm text-center'>A small river named Duden flows by their place and supplies <br/> it with the necessary regelialia.</p>
                             <h2 className='text-amber-100 text-sm text-center font-bold'>$2.9</h2>
-                            <button className='text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black'>Order Now</button>
+                         <Link to = '/escolhida/3'><button className='text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black'>Order Now</button></Link>
                         </div>            
                     </div>
         
@@ -23,7 +24,7 @@ const Bebidas = (props) => {
                             <h1 className='text-white text-lg'>Sprite</h1>
                             <p className='text-white text-sm text-center'>A small river named Duden flows by their place and supplies <br/> it with the necessary regelialia.</p>
                             <h2 className='text-amber-100 text-sm text-center font-bold'>$2.9</h2>
-                            <button className='text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black'>Order Now</button>
+                            <Link to = '/escolhida/4'><button className='text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black'>Order Now</button></Link>
                         </div>  
                     </div>
         

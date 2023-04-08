@@ -12,6 +12,10 @@
     }
 }
 
+.contato{
+    font-family: 'Montserrat';
+}
+
 .title{
     font-family: 'Montserrat';
     font-size: 5ch;
@@ -28,3 +32,16 @@ body{
     background-size: cover;
     min-height: 715px;
 }
+
+.image{
+    background-image: url('../src/assets/bg.jpg');
+}
+
+.p {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: none;
+    border-right-width: none;
+    border-left-width: none;
+    background-color: transparent
+  }

@@ -1,6 +1,7 @@
 import React from 'react';
 import calabresa from '../../assets/calabresa.png';
 import marguerita from '../../assets/marguerita.png';
+import { Link } from 'react-router-dom';
 
 const Pizza = (props) => {
   return (
@@ -17,9 +18,9 @@ const Pizza = (props) => {
             with the necessary regelialia.
           </p>
           <h2 className="text-amber-100 text-sm text-center font-bold">$2.9</h2>
-          <button className="text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black">
+          <Link to = '/escolhida/1'><button className="text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black">
             Order Now
-          </button>
+          </button></Link>
         </div>
       </div>
 
@@ -35,9 +36,9 @@ const Pizza = (props) => {
             with the necessary regelialia.
           </p>
           <h2 className="text-amber-100 text-sm text-center font-bold">$2.9</h2>
-          <button className="text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black">
+          <Link to = '/escolhida/2'><button className="text-white mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black">
             Order Now
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>
