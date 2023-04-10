@@ -44,4 +44,8 @@ body{
     border-right-width: none;
     border-left-width: none;
     background-color: transparent
-  }
+}
+
+.transparent{
+    background-color: transparent
+}
