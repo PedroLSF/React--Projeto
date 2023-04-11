@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Escolhida from './pages/Escolhida';
 import Login from './pages/Login';
 import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './routes/ProtectedRoute';
 
 
 function App() {
@@ -17,7 +18,11 @@ function App() {
       <AuthProvider>
         <Navbar/>
         <Routes>
-          <Route path = '/' element = {<Home/>} />
+          <Route path = '/' element = {
+            <ProtectedRoute>
+              <Home/>
+            </ProtectedRoute>
+          } />
           <Route path = '/menu' element = {<Menu/>} />
           <Route path = '/contato' element = {<Contato/>} />
           <Route path = '/chef' element = {<Chefs/>} />
