@@ -10,6 +10,9 @@ import Escolhida from './pages/Escolhida';
 import Login from './pages/Login';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './routes/ProtectedRoute';
+import Register from './pages/Register';
+import Admin from './pages/Admin';
+import AddProduct from './pages/AddProduct';
 
 
 function App() {
@@ -21,6 +24,7 @@ function App() {
           <Route path = '/' element = {
             <ProtectedRoute>
               <Home/>
+
             </ProtectedRoute>
           } />
           <Route path = '/menu' element = {<Menu/>} />
@@ -29,6 +33,17 @@ function App() {
           <Route path = '/escolhida/:id' element = {<Escolhida/>} />
           <Route path = '/*' element = {<NotFound/>} />
           <Route path = '/login' element = {<Login/>} />
+          <Route path = '/register' element = {<Register/>} />
+          <Route path = '/admin' element = {
+            <ProtectedRoute>
+              <Admin/>
+            </ProtectedRoute>
+          } />
+          <Route path = '/add-product' element = {
+            <ProtectedRoute>
+              <AddProduct/>
+            </ProtectedRoute>
+          } />
         </Routes>
       </AuthProvider>
     </>

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Pedido from '../Pedido';
-
 
 export const ListaPedido = () => {
     const [categoriaTab, setCategoriaTab] = useState('Pizza');
+
   return (
     <section className='my-12 max-w-screen-xl mx-auto px-3'>
         <div className='flex items-center justify-center space-x-6'>
