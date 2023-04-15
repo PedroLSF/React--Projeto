@@ -13,6 +13,8 @@ import ProtectedRoute from './routes/ProtectedRoute';
 import Register from './pages/Register';
 import Admin from './pages/Admin';
 import AddProduct from './pages/AddProduct';
+import EditProduct from './pages/EditProduct';
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -24,7 +26,6 @@ function App() {
           <Route path = '/' element = {
             <ProtectedRoute>
               <Home/>
-
             </ProtectedRoute>
           } />
           <Route path = '/menu' element = {<Menu/>} />
@@ -39,9 +40,19 @@ function App() {
               <Admin/>
             </ProtectedRoute>
           } />
-          <Route path = '/add-product' element = {
+          <Route path = '/admin/add-product' element = {
             <ProtectedRoute>
               <AddProduct/>
+            </ProtectedRoute>
+          } />
+          <Route path = '/admin/edit-product/:id' element = {
+            <ProtectedRoute>
+              <EditProduct/>
+            </ProtectedRoute>
+          } />
+          <Route path = '/cart' element = {
+            <ProtectedRoute>
+              <Cart/>
             </ProtectedRoute>
           } />
         </Routes>

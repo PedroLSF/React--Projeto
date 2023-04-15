@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {FaEdit} from 'react-icons/fa'
 import {MdDelete} from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
-import { findAllProducts } from '../../services/productService'
+import { findAllProducts, deleteProduct } from '../../services/productService'
+import { Link } from 'react-router-dom'
 
 const Admin = () => {
     const [products, setProducts] = useState([]);
@@ -17,10 +18,18 @@ const Admin = () => {
         setProducts(response.data)
     }
 
+    const removeProduct = async (id) => {
+        const answer = window.confirm('Confirmar Ação?')
+        if(answer){
+            await deleteProduct(id)
+            getAllProducts();
+        }
+    }
+
     return (
         <section className='my-12 max-w-screen-xl mx-auto px-6'>
             <div className='flex justify-end space-y-2'>
-                <button onClick={() => navigate('/add-product')} className='text-white px-2 mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black'>Adiciona Produto</button>
+                <button onClick={() => navigate('/admin/add-product')} className='text-white px-2 mt-3 p-1 border transition duration-700 hover:bg-amber-100 hover:text-black'>Adiciona Produto</button>
             </div>
 
             <div className='flex flex-col my-8'>
@@ -65,8 +74,8 @@ const Admin = () => {
                                         </td>
                                         <td className='px-6 py-4 whitespace-nowrap flex flex-col mt-8 h-24 items-center justify-center'>
                                             <div className='flex items-center justify-center space-x-3'>
-                                                <FaEdit/>
-                                                <MdDelete/>
+                                                <Link to = {`/admin/edit-product/${product._id}`}><FaEdit className='cursor-pointer'/></Link>
+                                                <MdDelete onClick={() => removeProduct(product._id)} className='cursor-pointer'/>
                                             </div>
                                         </td>
                                     </tr>

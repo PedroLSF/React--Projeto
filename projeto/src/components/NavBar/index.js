@@ -17,7 +17,6 @@ const Navbar = () => {
             {userLogged ? (
               <div className='flex items-center justify-end space-x-4'>
                 <div className='relative flex cursor-pointer'>
-                  <span className='bg-amber-100 w-4 h-4 rounded-full p-1 flex items-center justify-center absolute -right-2 -top-2 text-black'>2</span>
                   <AiOutlineShoppingCart className='w-6 h-6 cursor-pointer text-amber-100'/>
                 </div>
                 <img src = "" alt = ""/>
